@@ -39,6 +39,8 @@ buttons
 restart
 quit
 */
+
+.quiz-done,
 .time-left,
 .timer-sec,
 h1,
@@ -54,9 +56,32 @@ footer,
 header {
     color:var(--textColor);
     font-family:var(--font);
-    border: solid 4px var(--accentColor);
+    border-bottom: solid 4px var(--accentColor);
+   
+}
+
+.high-score{
+    font-family: var(--font);
+    color: var(--accentColor);
+    
 }
 
 button {
-    
+    color:white;
+    font-family:var(--font);
+    background-color: var(--btnColor);
+    text-align: center;
+    padding:5px;
+    margin:8px;
+    transition-duration: 0.4s;
+}
+
+button:hover{
+    background-color: var(--accentColor); 
+}
+
+button:active{
+    background-color: var(--btnColor);
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
 }
