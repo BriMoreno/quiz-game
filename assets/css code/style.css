@@ -1,0 +1,39 @@
+:root {
+    --bgColor: #2589BD; Blue NCS
+    --textColor: #187795; Teal Blue
+    --btnColor: #38686A; Ming
+    --bordeColor: #A3B4A2; Laurel Green
+    --accentColor: #CDC6AE; Bone
+    --font: Verdana,sans-serif;
+}
+* {
+    margin:auto;
+    padding:auto;
+    box-sizing:border-box;
+}
+
+/*class names
+
+quiz-mod
+timer
+time-left
+timer-sec
+
+intro
+list
+list-Item
+
+start
+
+q-text
+options
+total-q
+next-btn
+
+result-box
+quiz-done
+score
+buttons
+restart
+quit
+*/
