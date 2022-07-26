@@ -1,15 +1,17 @@
 :root {
-    --bgColor: #2589BD; Blue NCS
-    --textColor: #187795; Teal Blue
-    --btnColor: #38686A; Ming
-    --bordeColor: #A3B4A2; Laurel Green
-    --accentColor: #CDC6AE; Bone
+    --accentColor: #2589BD;         /*Blue NCS*/
+    --textColor: #187795;       /*Teal Blue*/
+    --btnColor: #38686A;        /*Ming*/
+    --bordeColor: #A3B4A2;      /*Laurel Green*/
+    --bgColor: #CDC6AE;     /*Bone*/
     --font: Verdana,sans-serif;
 }
+
 * {
     margin:auto;
     padding:auto;
     box-sizing:border-box;
+    background-color: var(--bgColor);
 }
 
 /*class names
@@ -37,3 +39,24 @@ buttons
 restart
 quit
 */
+.time-left,
+.timer-sec,
+h1,
+.intro {
+    color:var(--textColor);
+    font-family:var(--font);
+    margin:10px;
+    padding:10px;
+
+}
+
+footer,
+header {
+    color:var(--textColor);
+    font-family:var(--font);
+    border: solid 4px var(--accentColor);
+}
+
+button {
+    
+}
