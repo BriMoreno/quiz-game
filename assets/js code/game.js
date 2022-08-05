@@ -88,6 +88,28 @@ var timeEl = document.querySelector(".timer");
 
 //to start the quiz
 function start() {
-  var remove = document.querySelector(".quiz-mod")
-  var quizBox = document.querySelector("")
+  var remove = document.querySelector("#quiz-box")
+  var quizBox = document.querySelector("#quiz")
+  console.log("start quiz");
+  //hiding start scree
+  remove.remove("hidden");
+  //setting variable to start values
+  questionPos = 0;
+  playerScore = 0;
+  timerTracker = 20;
+  startTimer();
+}
+
+//the timer
+function startTimer() {
+  interval = setInterval(function(){
+    inter
+    timeTracker--;
+    timeEl.textContent === timerTracker;
+    //for when the timer ends
+    if(timeTracker <= 0) {
+      clearInterval(interval);
+      endGame();
+    }
+  })
 }
