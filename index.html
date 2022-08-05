@@ -33,39 +33,29 @@
           <li class="list-Item">Once the timer finished the quiz ends</li>
         </ul>
       </section>
+
         <!--Start-->
-        <div class="start"><button>Start Quiz</button></div>
-      <section>
-        <div class="q-text">
+      <div class="start"><button>Start Quiz</button></div>
+
+      <section id="quiz" class="hidden">
+        <p id="questions-asked"></p>
           <!--here are the questions-->
-        </div>
-
-        <div class="options">
-          <!--Answer options-->
-        </div>
+          <button id = "btn-a"></button>
+          <button id = "btn-b"></button>
+          <button id = "btn-c"></button>
+          <button id = "btn-d"></button>
       </section>
-
-  <footer>
-    <div class="total-q">
-      <!--count of the questions-->
-    </div>
-    <button class="next-btn">Next Question</button>
-  </footer>
       
-  <!--Result Box-->
-  <div class="result-box">
-    <i class="glyphicon glyphicon-thumbs-up"></i>
-  </div>
-
-  <div class="quiz-done">You've Completed the Quiz!</div>
-  <div class="score">
-    <!--Insert Score Result-->
-  </div>
-  <div class="buttons">
-    <button class="restart">Redo Quiz</button>
-    <button class="quit">Exit</button>
-  </div>
+      <div id="end-quiz" class = "hidden">
+        <div>
+          <div class="save-score"></div>
+          <label for="name">Enter Initials</label>
+          <input type="text" id="player"/>
+          <button id="submit">Submit</button>
+        </div>
+      </div>
     </main>
 	<script src="assets/js code/game.js"></script>
+  <script src="assets/js code/highscore.js"></script>
   </body>
 </html>

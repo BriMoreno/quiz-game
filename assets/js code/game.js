@@ -1,5 +1,16 @@
+//timer
+var timeTracker;
+var timer;
+var interval;
+
+//declare the questions
+var questionPos= 0;
+
+//starting score set
+var score = 0;
+
 // creating an array and passing the number, questions, options, and answers
-let questions = [
+var questions = [
     {
     numb: 1,
     question: "Which one of these is considered Machine Language.",
@@ -67,3 +78,16 @@ let questions = [
      ]
    },
 ];
+
+//decide what question comes up
+var currentQ = questions[questionPos];
+
+//declaring interval and timeEl
+
+var timeEl = document.querySelector(".timer");
+
+//to start the quiz
+function start() {
+  var remove = document.querySelector(".quiz-mod")
+  var quizBox = document.querySelector("")
+}
