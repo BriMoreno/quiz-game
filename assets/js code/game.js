@@ -96,7 +96,7 @@ function start() {
   //setting variable to start values
   questionPos = 0;
   playerScore = 0;
-  timerTracker = 20;
+  timeTracker = 20;
   startTimer();
 }
 
@@ -105,11 +105,52 @@ function startTimer() {
   interval = setInterval(function(){
     inter
     timeTracker--;
-    timeEl.textContent === timerTracker;
+    timeEl.textContent === timeTracker;
     //for when the timer ends
     if(timeTracker <= 0) {
       clearInterval(interval);
       endGame();
     }
-  })
+  }, 1000);
 }
+
+var startBtn = document.querySelector("#start");
+startBtn.addEventListener("click", startQuiz);
+
+//answering questions
+function answering(e) {
+  var currentQ = questions[questionPos];
+  var playerA = e.target.textContent;
+  var questionA =currentQ.answer;
+
+  console.log(e.target.textContent);
+
+  if(playerA===questionA) {
+    console.log(true);
+    //add point for correct answer
+    playerScore++;
+    console.log(playerScore);
+  } else {
+    console.log(false);
+    timeTracker = timeTracker -5;
+  }
+  //ending quiz
+  if (questionPos === 2) {
+    endQuiz();
+  } else {
+    questionPos++;
+    displayQuestion();
+  }
+
+  }
+
+  function endQuiz() {
+    clearInterval(interval);
+    hideQuestion();
+  }
+
+  //hide quiz box
+
+  function hideQuestion() {
+    
+  }
