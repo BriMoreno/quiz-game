@@ -152,5 +152,30 @@ function answering(e) {
   //hide quiz box
 
   function hideQuestion() {
-    
+    var quizBox = document.querySelector("#quiz")
+    //highscore
+    quizBox.classList.add("hidden");
+    var inputName = document.querySelector("#end-quiz");
+    inputName.classList.remove("hidden");
   }
+
+  function displayQuestion() {
+    var quizBox = document.querySelector('#questions-asked');
+    var currentQ = questions[questionPos];
+    var Qtext =currentQ.question;
+
+    //get text
+    quizBox.textContent = questions.question;
+
+    var answers = currentQ.questions.answers;
+
+    for(let index = 0; index <answers.length; index++) {
+      const element = answers[index];
+      console.log(element);
+
+      const btnID = document.querySelector('#btn-'+ index);
+      //click event for answers
+      btnID.addEventListener("click", questionA)
+    }
+  }
+  displayQuestion();

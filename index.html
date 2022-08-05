@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -5,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Quiz</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css code/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
 
   <header>
@@ -20,7 +21,7 @@
         </button>
 
         <section class="intro">
-        <h1>Instructions</h1>
+        <h2>Instructions</h2>
         <ul class="list">
           <li class="list-Item">This is a timed Quiz</li>
           <li class="list-Item">You cannot change your answers</li>
@@ -30,9 +31,9 @@
       </section>
 
         <!--Start-->
-      <section id="quiz-box">
+      <div id="quiz-box">
       <div class="start"><button>Start Quiz</button></div>
-    </section>
+      </div>
       <section id="quiz" class="hidden">
         <p id="questions-asked"></p>
           <!--here are the questions-->
@@ -45,13 +46,13 @@
       <div id="end-quiz" class = "hidden">
         <div>
           <div class="save-score"></div>
-          <label for="name">Enter Initials</label>
+          <label id="playerN" for="name">Enter Initials</label>
           <input type="text" id="player"/>
           <button id="submit">Submit</button>
         </div>
       </div>
     </main>
-	<script src="assets/js code/game.js"></script>
-  <script src="assets/js code/highscore.js"></script>
+	<script src="assets/js/game.js"></script>
+  <script src="assets/js/highscore.js"></script>
   </body>
 </html>
