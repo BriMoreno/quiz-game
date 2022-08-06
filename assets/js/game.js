@@ -103,7 +103,6 @@ function start() {
 //the timer
 function startTimer() {
   interval = setInterval(function(){
-    inter
     timeTracker--;
     timeEl.textContent === timeTracker;
     //for when the timer ends
@@ -115,7 +114,7 @@ function startTimer() {
 }
 
 var startBtn = document.querySelector("#start");
-startBtn.addEventListener("click", startQuiz);
+startBtn.addEventListener("click", start);
 
 //answering questions
 function answering(e) {
