@@ -23,70 +23,55 @@ var optD = document.getElementById("btn-d");
 // creating an array and passing the number, questions, options, and answers
 var quiz = [
     {
-    numb: 1,
     question: "Which one of these is considered Machine Language.",
-    answer: "Binary and Hexadecimal",
-    options: [
-      "Binary",
-      "Beep Boop Beep",
-      "Hypertext Markup Language (HTML)",
-      "Python"
-    ]
+    answer: "btn-a",
+    optionA:"Binary",
+    optionB:"Beep Boop Beep",
+    optionC:"Hypertext Markup Language (HTML)",
+    optionD:"Python"
   },
     {
-    numb: 2,
     question: "Which one of these is considered Assembly Language.",
-    answer: "Advanced RISC Machine",
-    options: [
-      "Cascading Style Sheet (CSS)",
-      "C++",
-      "Advanced RISC Machine (ARM)",
-      "Java"
-    ]
+    answer: "btn-a",
+    optionA:"Cascading Style Sheet (CSS)",
+    optionB:"C++",
+    optionC:"Advanced RISC Machine (ARM)",
+    optionD:"Java"
+    
   },
     {
-    numb: 3,
     question: "What is the difference between Machine Language and High-Level Language.",
-    answer: "Readablity: Machine language is ment for the machine and High-Level can be read by users then compiled into Machine language",
-    options: [
-      "They are used for different Operating Systems (OS).",
-      "Readablity: Machine language is ment for the machine and High-Level can be read by users then compiled into Machine language",
-      "There is None",
-      "Umm next?"
-    ]
+    answer: "btn-b",
+    optionA:"They are used for different Operating Systems (OS).",
+    optionB:"Readablity: Machine language is ment for the machine and High-Level can be read by users then compiled into Machine language",
+    optionC:"There is None",
+    optionD:"Umm next?"
+    
   },
     {
-    numb: 4,
     question: "What type of coding language is Python?",
-    answer: "High-Level and Object-Orientated",
-    options: [
-      "High-Level and Object-Orientated",
-      "A snake's favorite",
-      "Machine",
-      "Scripting"
-    ]
+    answer: "btn-a",
+    optionA: "High-Level and Object-Orientated",
+    optionB:"A snake's favorite",
+    optionC:"Machine",
+    optionD:"Scripting"
   },
     {
-    numb: 5,
     question: "What was the first programming language called?",
-    answer: "FORTRAN",
-    options: [
-      "SQL",
-      "BASIC",
-      "FORTRAN",
-      "Lisp"
-    ]
+    answer: "btn-c",
+    optionA:"SQL",
+    optionB:"BASIC",
+    optionC:"FORTRAN",
+    optionD:"Lisp"
   },
  
     {
-     numb: 6,
      question: "Is Java and JavaScipt the same?",
      answer: "They are different coding languages.",
-     options: [
-       "They are the same.",
-       "They are different coding languages.",
-       "Let me ask my mom."
-     ]
+     optionA:"They are the same.",
+     optionB:"They are different coding languages.",
+     optionC:"Let me ask my mom."
+     optionD:"can you repeat the question."
    },
 ];
 
