@@ -1,8 +1,27 @@
 //creating variables to make html id's easier to access
+var timer = document.getElementById("timer");
+var home = document.getElementById("homePage");
+var questions = document.getElementById("questions");
+var startQuiz = document.getElementById("startBtn");
+var quizBox = document.getElementById("quiz-box");
+var endGame = document.getElementById("endGame");
+var hsPage = document.getElementById("score-page");
+var player = document.getElementById("player")
+var initials = document.getElementById("initials");
+var results = document.getElementById("results");
+var hScore = document.getElementById("hScore");
+var endScore = document.getElementById("endScore");
+var scoreBox = document.getElementById("score-box");
+var submit = document.getElementById("submit");
+var moreBtns = document.getElementById("moreBtns");
+var optA = document.getElementById("btn-a");
+var optB = document.getElementById("btn-b");
+var optC = document.getElementById("btn-c");
+var optD = document.getElementById("btn-d");
 
 
 // creating an array and passing the number, questions, options, and answers
-var questions = [
+var quiz = [
     {
     numb: 1,
     question: "Which one of these is considered Machine Language.",
