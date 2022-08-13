@@ -1,57 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Quiz</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-  </head>
 
-  <header>
-    <h1>Coding Language Types</h1>
-    <div class="timer">20 Seconds</div>
-  </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="reset" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
-  <body>
-    <main>
-        <button onclick="window.location.href='highscore.html';">
-          View Highscores
-        </button>
+<body>
+  <div class="quiz-container">
+    <div id="homePage">
+      <h2>Coding Quiz</h2>
+      <h4>Quiz your knowledge on different types of code and fun facts while being timed! Try for the best speed!</h4>
+      <button id="startBtn">Begin</button>
+      <button id="highScore" onclick="showScores();">High Scores</button>
+    </div>
+  </div>
 
-        <section class="intro">
-        <h2>Instructions</h2>
-        <ul class="list">
-          <li class="list-Item">This is a timed Quiz</li>
-          <li class="list-Item">You cannot change your answers</li>
-          <li class="list-Item">Points accumulate based on your answers</li>
-          <li class="list-Item">Once the timer finished the quiz ends</li>
-        </ul>
-      </section>
+  <!--Start-->
+  <div id="quiz-box">
+    <div id="timer">Time Left: </div>
+    <div id="questions">
+      <p>For the questions</p>
+    </div>
 
-        <!--Start-->
-      <div id="quiz-box">
-      <div id="start"><button>Start Quiz</button></div>
+    <!--here are the questions-->
+    <button id="btn-a" onclick="checkAnswer('btn-a')">A</button>
+    <button id="btn-b" onclick="checkAnswer('btn-b')">B</button>
+    <button id="btn-c" onclick="checkAnswer('btn-c')">C</button>
+    <button id="btn-d" onclick="checkAnswer('btn-d')">D</button>
+    <div id="results"></div>
+  </div>
+
+  <!--where the user's name is stored-->
+  <div id="endGame">
+    <div id="endScore"></div>
+    <input type="text" size="25" placeholder="Enter Your Initials" name="player" id="player" />
+    <button id="submit">Enter score for leaderboard</button>
+  </div>
+
+  <!--the page that displays score and player name-->
+  <div id="score-container">
+    <div id="score-page">
+      <div class="header">
+        <h2>Player's Initials</h2>
+        <h4>Score</h4>
       </div>
-      <section id="quiz" class="hidden">
-        <p id="questions-asked"></p>
-          <!--here are the questions-->
-          <button id = "btn-0"></button>
-          <button id = "btn-1"></button>
-          <button id = "btn-2"></button>
-          <button id = "btn-3"></button>
-      </section>
-      
-      <div id="end-quiz" class = "hidden">
-        <div>
-          <div class="save-score"></div>
-          <label id="playerN" for="name">Enter Initials</label>
-          <input type="text" id="player"/>
-          <button id="submit">Submit</button>
-        </div>
-      </div>
-    </main>
-	<script src="assets/js/game.js"></script>
-  </body>
+      <div id="intiials"></div>
+      <div id="hscore"></div>
+    </div>
+  </div>
+  <!--End of game options-->
+  <div id="moreBtns"></div>
+  <button id="replay" onclick="replay()">Replay</button>
+  <button id="resetScores" onclick="clear()">Reset l
+    Leaderboard</button>
+
+  <script src="./assets/js/game.js"></script>
+</body>
+
 </html>
