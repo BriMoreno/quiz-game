@@ -19,59 +19,66 @@ var optB = document.getElementById("btn-b");
 var optC = document.getElementById("btn-c");
 var optD = document.getElementById("btn-d");
 
+//Other variables that don't grab from HTML
+var lastQ = quiz.length;
+var seconds = 60;
+var timeInterval;
+var score = 0;
+var onTheMoney;
+var currentQuestions = 0;
 
 // creating an array and passing the number, questions, options, and answers
 var quiz = [
     {
-    question: "Which one of these is considered Machine Language.",
+    question: "How many Studio Ghibli movies are there?",
     answer: "btn-a",
-    optionA:"Binary",
-    optionB:"Beep Boop Beep",
-    optionC:"Hypertext Markup Language (HTML)",
-    optionD:"Python"
+    optionA:"22",
+    optionB:"16",
+    optionC:"30",
+    optionD:"8"
   },
     {
-    question: "Which one of these is considered Assembly Language.",
+    question: "What is Studio Ghibli most popular movie?",
     answer: "btn-a",
-    optionA:"Cascading Style Sheet (CSS)",
-    optionB:"C++",
-    optionC:"Advanced RISC Machine (ARM)",
-    optionD:"Java"
+    optionA:"Spirited Away",
+    optionB:"Grave of the Fireflies",
+    optionC:"Howl's Moving Castle",
+    optionD:"Princess Mononoke"
     
   },
     {
-    question: "What is the difference between Machine Language and High-Level Language.",
+    question: "What was Studio Ghibli's first film",
     answer: "btn-b",
-    optionA:"They are used for different Operating Systems (OS).",
-    optionB:"Readablity: Machine language is ment for the machine and High-Level can be read by users then compiled into Machine language",
-    optionC:"There is None",
-    optionD:"Umm next?"
+    optionA:"My Neighbor Totoro",
+    optionB:"Nausicaä of the Valley of the Wind",
+    optionC:"Castle in the Sky",
+    optionD:"Only Yesterday"
     
   },
     {
-    question: "What type of coding language is Python?",
+    question: "What is Kiki's cat named in Kiki's Delivery Service?",
     answer: "btn-a",
-    optionA: "High-Level and Object-Orientated",
-    optionB:"A snake's favorite",
-    optionC:"Machine",
-    optionD:"Scripting"
+    optionA: "Jiji",
+    optionB:"Gigi",
+    optionC:"Bibi",
+    optionD:"Didi"
   },
     {
-    question: "What was the first programming language called?",
+    question: "What does Ghibli mean?",
     answer: "btn-c",
-    optionA:"SQL",
-    optionB:"BASIC",
-    optionC:"FORTRAN",
-    optionD:"Lisp"
+    optionA:"Fly to achieve your dreams",
+    optionB:"Laughter from a child",
+    optionC:"Hot air blowing from the Sahara desert",
+    optionD:"There isn't a meaning"
   },
  
     {
-     question: "Is Java and JavaScipt the same?",
-     answer: "They are different coding languages.",
-     optionA:"They are the same.",
-     optionB:"They are different coding languages.",
-     optionC:"Let me ask my mom."
-     optionD:"can you repeat the question."
+     question: "What fairy tale inspired Ponyo?",
+     answer: "btn-d",
+     optionA:"The Great Sea Serpent by Hans Christian Andersen",
+     optionB:"The Sea-Hare by the Brothers Grimm",
+     optionC:"Let me ask my mom.",
+     optionD:"The Little Sea Maid by Craigie Andersen"
    },
 ];
 
