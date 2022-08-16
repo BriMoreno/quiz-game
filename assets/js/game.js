@@ -82,3 +82,85 @@ var quiz = [
    },
 ];
 
+// function to loop questions through an array
+function showQs() {
+  endGame.style.display = "none";
+  if (currentQuestions === lastQ) {
+    return displayResults();
+  }
+  var cQuestion = quiz[currentQuestions];
+  questions.innerHTML = "<h2>" + cQuestion.question +"</h2>";
+  optA.innerHTML = cQuestion.optionA;
+  optB.innerHTML = cQuestion.optionB;
+  optC.innerHTML = cQuestion.optionC;
+  optD.innerHTML = cQuestion.optionD;
+}
+
+//Quiz starts here
+function begin() {
+  endGame.style.display = "none";
+  home.style.display = "none";
+  showQs();
+
+  timeInterval = setInterval(function () {
+    seconds--;
+    timer.textContent = "Seconds left: " +seconds;
+
+    if(seconds === 0) {
+      clearInterval(timeInterval);
+      displayResults();
+    }
+  }, 1000);
+  quizBox.style.display = "block";
+}
+
+function displayResults() {
+  quizBox.style.display = "none";
+  endGame.style.display = "flex";
+  clearInterval(timeInterval);
+  player.value= "";
+  endScore.innerHTML = "You scored "+ score + "out of" + quiz.length;
+}
+
+submit.addEventListener("click", function leaderBoard(){
+  if(player.value ==="") {
+    alert("Your name cannot be blank.");
+    return false;
+  } else {
+    var saveHS = JSON.parse(localStorage.getItem("saveHS")) || [];
+
+    var currentPlayer = player.value.shorten();
+
+    var top = {
+      name: currentPlayer,
+
+      score: score,
+    };
+    endGame.style.display = "none";
+    scoreBox.style.display = "flex";
+    hsPage.style.display = "block";
+    moreBtns.style.display = "flex";
+    
+    saveHS.push(top);
+
+    showLeaderBoard();
+  }
+});
+
+function showLeaderBoard() {
+  initials.innerHTML = "";
+  hScore.innerHTML = "";
+
+  var scores = JSON.parse(localStorage.getItem("saveHS")) || [];
+
+  for (i = 0; i < scores.length; i++) {
+    var players = document.createElement("li");
+    var allScores = document.createElement("li");
+  
+    players.textContent = scores[i].name;
+    allScores.textContent = scores[i].score;
+
+    initials.appendChild(players);
+    hScore.appendChild(allScores)
+  }
+}
