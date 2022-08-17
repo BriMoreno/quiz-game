@@ -17,7 +17,7 @@
       <h2>Coding Quiz</h2>
       <h4>Quiz your knowledge on different types of code and fun facts while being timed! Try for the best speed!</h4>
       <button id="startBtn">Begin</button>
-      <button id="highScore" onclick="showScores();">High Scores</button>
+      <button id="highScore" onclick="displayLB();">High Scores</button>
     </div>
   </div>
 
@@ -29,10 +29,10 @@
     </div>
 
     <!--here are the questions-->
-    <button id="btn-a" onclick="checkAnswer('btn-a')">A</button>
-    <button id="btn-b" onclick="checkAnswer('btn-b')">B</button>
-    <button id="btn-c" onclick="checkAnswer('btn-c')">C</button>
-    <button id="btn-d" onclick="checkAnswer('btn-d')">D</button>
+    <button id="btn-a" onclick="getAnswers('btn-a')">A</button>
+    <button id="btn-b" onclick="getAnswers('btn-b')">B</button>
+    <button id="btn-c" onclick="getAnswers('btn-c')">C</button>
+    <button id="btn-d" onclick="getAnswers('btn-d')">D</button>
     <div id="results"></div>
   </div>
 
@@ -46,7 +46,7 @@
   <!--the page that displays score and player name-->
   <div id="score-box">
     <div id="score-page">
-      <div class="header">
+      <div id="header">
         <h2>Player's Initials</h2>
         <h4>Score</h4>
       </div>

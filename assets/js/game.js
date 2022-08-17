@@ -31,54 +31,54 @@ var currentQuestions = 0;
 var quiz = [
     {
     question: "How many Studio Ghibli movies are there?",
-    answer: "btn-a",
+    answerEl: "btn-a",
     optionA:"22",
     optionB:"16",
     optionC:"30",
-    optionD:"8"
+    optionD:"8",
   },
     {
     question: "What is Studio Ghibli most popular movie?",
-    answer: "btn-a",
+    answerEl: "btn-a",
     optionA:"Spirited Away",
     optionB:"Grave of the Fireflies",
     optionC:"Howl's Moving Castle",
-    optionD:"Princess Mononoke"
+    optionD:"Princess Mononoke",
     
   },
     {
     question: "What was Studio Ghibli's first film",
-    answer: "btn-b",
+    answerEl: "btn-b",
     optionA:"My Neighbor Totoro",
     optionB:"Nausicaä of the Valley of the Wind",
     optionC:"Castle in the Sky",
-    optionD:"Only Yesterday"
+    optionD:"Only Yesterday",
     
   },
     {
     question: "What is Kiki's cat named in Kiki's Delivery Service?",
-    answer: "btn-a",
+    answerEl: "btn-a",
     optionA: "Jiji",
     optionB:"Gigi",
     optionC:"Bibi",
-    optionD:"Didi"
+    optionD:"Didi",
   },
     {
     question: "What does Ghibli mean?",
-    answer: "btn-c",
+    answerEl: "btn-c",
     optionA:"Fly to achieve your dreams",
     optionB:"Laughter from a child",
     optionC:"Hot air blowing from the Sahara desert",
-    optionD:"There isn't a meaning"
+    optionD:"There isn't a meaning",
   },
  
     {
      question: "What fairy tale inspired Ponyo?",
-     answer: "btn-d",
+     answerEl: "btn-d",
      optionA:"The Great Sea Serpent by Hans Christian Andersen",
      optionB:"The Sea-Hare by the Brothers Grimm",
      optionC:"Let me ask my mom.",
-     optionD:"The Little Sea Maid by Craigie Andersen"
+     optionD:"The Little Sea Maid by Craigie Andersen",
    },
 ];
 
@@ -164,3 +164,49 @@ function showLeaderBoard() {
     hScore.appendChild(allScores)
   }
 }
+
+function displayLB(){
+  home.style.display = "none";
+  endGame.style.display = "none";
+  scoreBox.style.display = "flex";
+  hsPage.style.display = "block";
+  moreBtns.style.display = "flex";
+
+  showLeaderBoard();
+
+}
+
+function clear() {
+  window.localStorage.clear();
+   initials.textContent = "";
+   hScore.textContent = "";
+}
+
+function replay() {
+scoreBox.style.display = "none";
+endGame.style.display = "none";
+home.style.display = "flex";
+
+  seconds = 75;
+  score = 0;
+  currentQuestions = 0;
+}
+
+function getAnswers(answer) {
+  right = quiz[currentQuestions].answerEl;
+
+  if (answer === right && quiz[currentQuestions] !== lastQ) {
+    score++;
+    alert("You're right!");
+    currentQuestions++;
+    showQs();
+  } else if (answer !== right && currentQuestions !== lastQ) {
+    alert("You're wrong");
+    currentQuestions++;
+    showQs();
+  } else {
+    displayLB();
+  }
+}
+
+startQuiz.addEventListener("click", begin);
