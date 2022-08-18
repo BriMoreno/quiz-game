@@ -19,17 +19,9 @@ var optB = document.getElementById("btn-b");
 var optC = document.getElementById("btn-c");
 var optD = document.getElementById("btn-d");
 
-//Other variables that don't grab from HTML
-var lastQ = quiz.length;
-var seconds = 60;
-var timeInterval;
-var score = 0;
-var onTheMoney;
-var currentQuestions = 0;
-
 // creating an array and passing the number, questions, options, and answers
 var quiz = [
-    {
+  {
     question: "How many Studio Ghibli movies are there?",
     optionA:"22",
     optionB:"16",
@@ -37,7 +29,7 @@ var quiz = [
     optionD:"8",
     answerEl: "btn-a",
   },
-    {
+  {
     question: "What is Studio Ghibli most popular movie?",
     optionA:"Spirited Away",
     optionB:"Grave of the Fireflies",
@@ -46,16 +38,15 @@ var quiz = [
     answerEl: "btn-a",
     
   },
-    {
+  {
     question: "What was Studio Ghibli's first film",
     optionA:"My Neighbor Totoro",
     optionB:"Nausicaä of the Valley of the Wind",
     optionC:"Castle in the Sky",
     optionD:"Only Yesterday",
     answerEl: "btn-b",
-    
   },
-    {
+  {
     question: "What is Kiki's cat named in Kiki's Delivery Service?",
     optionA: "Jiji",
     optionB:"Gigi",
@@ -63,7 +54,7 @@ var quiz = [
     optionD:"Didi",
     answerEl: "btn-a",
   },
-    {
+  {
     question: "What does Ghibli mean?",
     optionA:"Fly to achieve your dreams",
     optionB:"Laughter from a child",
@@ -72,24 +63,34 @@ var quiz = [
     answerEl: "btn-c",
   },
  
-    {
-     question: "What fairy tale inspired Ponyo?",
-     optionA:"The Great Sea Serpent by Hans Christian Andersen",
-     optionB:"The Sea-Hare by the Brothers Grimm",
-     optionC:"Let me ask my mom.",
-     optionD:"The Little Sea Maid by Craigie Andersen",
-     answerEl: "btn-d",
-   },
+  {
+    question: "What fairy tale inspired Ponyo?",
+    optionA:"The Great Sea Serpent by Hans Christian Andersen",
+    optionB:"The Sea-Hare by the Brothers Grimm",
+    optionC:"Let me ask my mom.",
+    optionD:"The Little Sea Maid by Craigie Andersen",
+    answerEl: "btn-d",
+  },
 ];
+
+//global variables
+var lastQ = quiz.length;
+var seconds = 60;
+var timeInterval;
+var score = 0;
+var onTheMoney;
+var currentQuestions = 0;
 
 // function to loop questions through an array
 function showQs() {
   endGame.style.display = "none";
+
   if (currentQuestions === lastQ) {
     return displayResults();
   }
   var cQuestion = quiz[currentQuestions];
-  questions.innerHTML = "<h2>" + cQuestion.question +"</h2>";
+  questions.innerHTML = "<p>" + cQuestion.question +"</p>";
+
   optA.innerHTML = cQuestion.optionA;
   optB.innerHTML = cQuestion.optionB;
   optC.innerHTML = cQuestion.optionC;
@@ -100,10 +101,11 @@ function showQs() {
 function begin() {
   endGame.style.display = "none";
   home.style.display = "none";
-  showQs();
 
+  showQs();
   timeInterval = setInterval(function () {
     seconds--;
+
     timer.textContent = "Seconds left: " +seconds;
 
     if(seconds === 0) {
@@ -117,19 +119,24 @@ function begin() {
 function displayResults() {
   quizBox.style.display = "none";
   endGame.style.display = "flex";
+
   clearInterval(timeInterval);
-  player.value= "";
+
+  player.value = "";
+
   endScore.innerHTML = "You scored "+ score + "out of" + quiz.length;
 }
 
 submit.addEventListener("click", function leaderBoard(){
   if(player.value ==="") {
+
     alert("Your name cannot be blank.");
     return false;
+
   } else {
     var saveHS = JSON.parse(localStorage.getItem("saveHS")) || [];
 
-    var currentPlayer = player.value.shorten();
+    var currentPlayer = player.value.trim();
 
     var top = {
       name: currentPlayer,
@@ -142,6 +149,7 @@ submit.addEventListener("click", function leaderBoard(){
     moreBtns.style.display = "flex";
     
     saveHS.push(top);
+    localStorage.setItem("saveHS", JSON.stringify(saveHS));
 
     showLeaderBoard();
   }
@@ -161,7 +169,7 @@ function showLeaderBoard() {
     allScores.textContent = scores[i].score;
 
     initials.appendChild(players);
-    hScore.appendChild(allScores)
+    hScore.appendChild(allScores);
   }
 }
 
@@ -173,7 +181,6 @@ function displayLB(){
   moreBtns.style.display = "flex";
 
   showLeaderBoard();
-
 }
 
 function clear() {
@@ -187,7 +194,7 @@ scoreBox.style.display = "none";
 endGame.style.display = "none";
 home.style.display = "flex";
 
-  seconds = 75;
+  seconds = 60;
   score = 0;
   currentQuestions = 0;
 }
@@ -195,17 +202,19 @@ home.style.display = "flex";
 function getAnswers(answer) {
   right = quiz[currentQuestions].answerEl;
 
-  if (answer === right && quiz[currentQuestions] !== lastQ) {
+  if (answer === right && currentQuestions !== lastQ) {
     score++;
     alert("You're right!");
     currentQuestions++;
+
     showQs();
   } else if (answer !== right && currentQuestions !== lastQ) {
     alert("You're wrong");
     currentQuestions++;
+
     showQs();
   } else {
-    displayLB();
+    displayResults();
   }
 }
 
