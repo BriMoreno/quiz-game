@@ -31,54 +31,54 @@ var currentQuestions = 0;
 var quiz = [
     {
     question: "How many Studio Ghibli movies are there?",
-    answerEl: "btn-a",
     optionA:"22",
     optionB:"16",
     optionC:"30",
     optionD:"8",
+    answerEl: "btn-a",
   },
     {
     question: "What is Studio Ghibli most popular movie?",
-    answerEl: "btn-a",
     optionA:"Spirited Away",
     optionB:"Grave of the Fireflies",
     optionC:"Howl's Moving Castle",
     optionD:"Princess Mononoke",
+    answerEl: "btn-a",
     
   },
     {
     question: "What was Studio Ghibli's first film",
-    answerEl: "btn-b",
     optionA:"My Neighbor Totoro",
     optionB:"Nausicaä of the Valley of the Wind",
     optionC:"Castle in the Sky",
     optionD:"Only Yesterday",
+    answerEl: "btn-b",
     
   },
     {
     question: "What is Kiki's cat named in Kiki's Delivery Service?",
-    answerEl: "btn-a",
     optionA: "Jiji",
     optionB:"Gigi",
     optionC:"Bibi",
     optionD:"Didi",
+    answerEl: "btn-a",
   },
     {
     question: "What does Ghibli mean?",
-    answerEl: "btn-c",
     optionA:"Fly to achieve your dreams",
     optionB:"Laughter from a child",
     optionC:"Hot air blowing from the Sahara desert",
     optionD:"There isn't a meaning",
+    answerEl: "btn-c",
   },
  
     {
      question: "What fairy tale inspired Ponyo?",
-     answerEl: "btn-d",
      optionA:"The Great Sea Serpent by Hans Christian Andersen",
      optionB:"The Sea-Hare by the Brothers Grimm",
      optionC:"Let me ask my mom.",
      optionD:"The Little Sea Maid by Craigie Andersen",
+     answerEl: "btn-d",
    },
 ];
 

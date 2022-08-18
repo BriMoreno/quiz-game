@@ -6,6 +6,10 @@
     --bgColor: #CDC6AE;     /*Bone*/
     --font: Verdana,sans-serif;
 }
+* {
+    background-color: var(--bgColor);
+    justify-content: center;
+}
 
 li, p{
     padding: auto;
@@ -66,14 +70,58 @@ input{
 
 }
 
+#header {
+    display:flex;
+    font-family:var(--font);
+    background-color: var(--bgColor);
+    color:var(--textColor);
+    border-bottom: solid 5px var(--bordeColor); 
+}
 
+#score-box {
+    display:none;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+}
+
+#player {
+    margin:8px;
+    height: 28px;
+}
+
+#initials {
+    display:inline-block;
+    font-family: var(--font);
+    color:var(--textColor);
+    font-size:larger;
+    padding: 100px 100px;
+}
+
+#hScore {
+    float:center;
+    font-family: var(--font);
+    font-weight:bolder;
+}
+
+#endScore {
+    font-family: var(--font);
+    color: var(--textColor);
+    font-weight:bolder;
+    font-size: larger;
+}
+
+#moreBtns{
+    display:none;
+}
 button {
     display:inline-block;
     justify-content: center;
     font-family: sans-serif;
-    background-color: var(--bgColor);
+    background-color: var(--btnColor);
     border-radius: 10px;
-    color: var(--btnColor);
+    color: white;
     text-align: center;
     font-size: 15px;
     padding: 20px;
