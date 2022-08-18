@@ -7,81 +7,80 @@
     --font: Verdana,sans-serif;
 }
 
-* {
-    margin:auto;
-    padding:auto;
-    box-sizing:border-box;
-    background-color: var(--bgColor);
-}
-
-/*class names
-
-quiz-mod
-timer
-time-left
-timer-sec
-
-intro
-list
-list-Item
-
-start
-
-q-text
-options
-total-q
-next-btn
-
-result-box
-quiz-done
-score
-buttons
-restart
-quit
-*/
-
-.quiz-done,
-.time-left,
-.timer-sec,
-h1,
-.intro {
+li, p{
+    padding: auto;
     color:var(--textColor);
-    font-family:var(--font);
-    margin:10px;
-    padding:10px;
-
-}
-
-footer,
-header {
-    color:var(--textColor);
-    font-family:var(--font);
-    border-bottom: solid 4px var(--accentColor);
-   
-}
-
-.high-score{
     font-family: var(--font);
-    color: var(--accentColor);
-    
+    list-style-type: none;
+    text-align: center;
+    font-size: xx-large;
 }
+
+h2, h3{
+    font-family: var(--font);
+    color:var(--textColor);
+    margin:auto;
+}
+
+input{
+    text-align: center;
+}
+
+.quiz-container {
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#homePage {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#timer{
+    font-family: var(--font);
+    background-color: var(--bgColor);
+    color:var(--textColor);
+    font-size:larger;
+    text-align: center;
+    text-shadow: 1px 1px var(--bordeColor);
+}
+
+#quiz-box, 
+#results,
+#endGame {
+    display:none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#score-page {
+    display: none;
+    width: auto;
+    border: 10px solid var(--bordeColor);
+    background: var(--bgColor);
+
+}
+
 
 button {
-    color:white;
-    font-family:var(--font);
-    background-color: var(--btnColor);
+    display:inline-block;
+    justify-content: center;
+    font-family: sans-serif;
+    background-color: var(--bgColor);
+    border-radius: 10px;
+    color: var(--btnColor);
     text-align: center;
-    padding:5px;
-    margin:8px;
-    transition-duration: 0.4s;
-}
+    font-size: 15px;
+    padding: 20px;
+    width: 200px;
+    margin-top: 3px;
+  }
 
 button:hover{
-    background-color: var(--accentColor); 
-}
-
-button:active{
-    background-color: var(--btnColor);
-    box-shadow: 0 5px #666;
-    transform: translateY(2px);
-}
+    box-shadow: 4px 3px 6px var(--accentColor);
+  }
