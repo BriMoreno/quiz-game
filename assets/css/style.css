@@ -11,13 +11,12 @@
     justify-content: center;
 }
 
-li, p{
-    padding: auto;
+p, li{
     color:var(--textColor);
     font-family: var(--font);
     list-style-type: none;
-    text-align: center;
-    font-size: xx-large;
+    text-align:right;
+    font-size: x-large;
 }
 
 h2, h3{
@@ -35,7 +34,7 @@ input{
     height: 100vh;
     display:flex;
     align-items: center;
-    margin: 0 auto;
+    margin: auto;
 }
 
 #homePage {
@@ -50,22 +49,39 @@ input{
     color:var(--textColor);
     font-size:larger;
     text-align: center;
-    text-shadow: 1px 1px var(--bordeColor);
+    text-shadow: 1px 1px var(--borderColor);
 }
 
-#quiz-box, 
+#quix-box {
+    display:none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: var(--font);
+    padding-bottom: 9rem;
+    
+}
+
+#moreBtns,
 #results,
 #endGame {
     display:none;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: var(--font);
+    padding-bottom: 9rem;
+    background-color: var(--bgColor);
 }
 
-#score-page {
+#score-page{
     display: none;
-    width: auto;
-    border: 10px solid var(--bordeColor);
+    width: 125rem;
+    border: 5px solid var(--bordeColor);
     background: var(--bgColor);
 
 }
@@ -112,21 +128,19 @@ input{
     font-size: larger;
 }
 
-#moreBtns{
-    display:none;
-}
 button {
-    display:inline-block;
+    display:inline-flex;
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
     font-family: sans-serif;
     background-color: var(--btnColor);
     border-radius: 10px;
     color: white;
     text-align: center;
-    font-size: 15px;
-    padding: 20px;
+    font-size: medium;
+    padding: 25px;
     width: 200px;
-    margin-top: 3px;
   }
 
 button:hover{

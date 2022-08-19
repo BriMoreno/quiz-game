@@ -185,8 +185,8 @@ function displayLB(){
 
 function clear() {
   window.localStorage.clear();
-   initials.textContent = "";
-   hScore.textContent = "";
+  initials.textContent = "";
+  hScore.textContent = "";
 }
 
 function replay() {
