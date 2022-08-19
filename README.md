@@ -31,3 +31,6 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and my score
 ```
+
+## works cited
+https://www.codingnepalweb.com/quiz-app-with-timer-javascript/
