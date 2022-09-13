@@ -1,14 +1,15 @@
 :root {
-    --accentColor: #2589BD;         /*Blue NCS*/
-    --textColor: #187795;       /*Teal Blue*/
-    --btnColor: #38686A;        /*Ming*/
-    --bordeColor: #A3B4A2;      /*Laurel Green*/
-    --bgColor: #CDC6AE;     /*Bone*/
+    --accentColor: #EDDEA4;      
+    --textColor: #0FA3B1;      
+    --btnColor: #F7A072;        
+    --borderColor: #B5E2FA;      
+    --bgColor: #F9F7F3;    
     --font: Verdana,sans-serif;
 }
 * {
     background-color: var(--bgColor);
     justify-content: center;
+    align-items: center;
 }
 
 p, li{
@@ -31,15 +32,23 @@ input{
 
 .quiz-container {
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
     display:flex;
+    justify-content: center;
     align-items: center;
     margin: auto;
+}
+#questions {
+    margin: auto;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
 }
 
 #homePage {
     display:flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -48,19 +57,20 @@ input{
     background-color: var(--bgColor);
     color:var(--textColor);
     font-size:larger;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     text-shadow: 1px 1px var(--borderColor);
 }
 
 #quix-box {
-    display:none;
+    display:block;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     font-family: var(--font);
-    padding-bottom: 9rem;
+    padding-bottom: 5rem;
     
 }
 
@@ -119,6 +129,8 @@ input{
     float:center;
     font-family: var(--font);
     font-weight:bold;
+    justify-content: center;
+    align-items: center;
 }
 
 #endScore {
@@ -126,6 +138,8 @@ input{
     color: var(--textColor);
     font-weight:bold;
     font-size: large;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
@@ -144,5 +158,5 @@ button {
   }
 
 button:hover{
-    box-shadow: 4px 3px 6px var(--accentColor);
+    box-shadow: 4px 3px 6px var(--textColor);
   }

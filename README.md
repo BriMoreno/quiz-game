@@ -33,7 +33,7 @@ THEN I can save my initials and my score
 ```
 
 ## How it works
-![my gif](quizgame.gif)
+![my gif](quizgame%20.gif)
 
 ## Help
 

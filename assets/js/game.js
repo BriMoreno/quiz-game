@@ -124,7 +124,7 @@ function displayResults() {
 
   player.value = "";
 
-  endScore.innerHTML = "You scored "+ score + "out of" + quiz.length;
+  endScore.innerHTML = "You scored "+ score + "out of " + quiz.length;
 }
 
 submit.addEventListener("click", function leaderBoard(){
