@@ -1,8 +1,8 @@
 # quiz-game
 Making a quiz name from scratch using HTML, CSS, and JavaScript
-## Your Task
 
-At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
+## Description
+At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment and perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
 
 To help familiarize you with these tests and allow you to use the skills covered in this module, this Challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
 
@@ -32,5 +32,21 @@ WHEN the game is over
 THEN I can save my initials and my score
 ```
 
-## works cited
-https://www.codingnepalweb.com/quiz-app-with-timer-javascript/
+## How it works
+![my gif](quizgame.gif)
+
+## Help
+
+Any advise for improvement would be much appreciated.
+
+
+## Authors
+[BriMoreno](https://github.com/BriMoreno)
+
+
+## Acknowledgments
+
+Inspiration, code snippets, etc.
+* [awesome-readme](https://github.com/matiassingers/awesome-readme)
+* [https://www.codingnepalweb.com/quiz-app-with-timer-javascript/](https://www.codingnepalweb.com/quiz-app-with-timer-javascript/)
+
